@@ -99,6 +99,20 @@ describe('contentType tests',function(){
     });
   });
 
+  describe('csv tests',function(){
+    it('should match text/csv',function(){
+        assert(common.doContentType(['text/csv'],'csv'));
+    });
+    it('should match application/csv',function(){
+        assert(common.doContentType(['application/csv'],'csv'));
+    });
+  });
+
+  describe('plain tests',function(){
+    it('should match text/plain',function(){
+        assert(common.doContentType(['text/plain'],'plain'));
+    });
+  });
 });
 
 describe('array tests',function(){

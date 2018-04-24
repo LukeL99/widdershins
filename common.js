@@ -19,7 +19,9 @@ const contentTypes = {
     xml: ['^(application|text|image){1}\\/(.*\\+){0,1}xml(;){0,1}(\\s){0,}(charset=.*){0,}$'],
     json: ['^(application|text){1}\\/(.*\\+){0,1}json(;){0,1}(\\s){0,}(charset=.*){0,}$'],
     yaml: ['application/x-yaml', 'text/x-yaml'],
-    form: ['multipart/form-data', 'application/x-www-form-urlencoded', 'application/octet-stream']
+    form: ['multipart/form-data', 'application/x-www-form-urlencoded', 'application/octet-stream'],
+    csv: ['text/csv', 'application/csv'],
+    plain: ['text/plain']
 };
 
 function nop(obj) {

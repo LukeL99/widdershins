@@ -313,6 +313,16 @@ function getBodyParameterExamples(data) {
         content += xml.getXml(JSON.parse(safejson(obj)), '@', '', true, '  ', false) + '\n';
         content += '```\n\n';
     }
+    if (common.doContentType(data.consumes, 'csv')) {
+        content += '```csv\n';
+        content += yaml.safeDump(obj) + '\n';
+        content += '```\n\n';
+    }
+    if (common.doContentType(data.consumes, 'plain')) {
+        content += '```\n';
+        content += yaml.safeDump(obj) + '\n';
+        content += '```\n\n';
+    }
     return content;
 }
 
@@ -432,6 +442,16 @@ function getResponseExamples(data) {
                     }
                     if (common.doContentType(cta, 'yaml')) {
                         content += '```yaml\n';
+                        content += yaml.safeDump(obj) + '\n';
+                        content += '```\n\n';
+                    }
+                    if (common.doContentType(cta, 'csv')) {
+                        content += '```csv\n';
+                        content += yaml.safeDump(obj) + '\n';
+                        content += '```\n\n';
+                    }
+                    if (common.doContentType(cta, 'plain')) {
+                        content += '```\n';
                         content += yaml.safeDump(obj) + '\n';
                         content += '```\n\n';
                     }
