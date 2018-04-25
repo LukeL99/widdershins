@@ -90,6 +90,9 @@ function doit(s) {
     }
 
     converter.convert(api,options,function(err,output){
+        if(err) {
+            console.log(err);
+        }
         var outfile = argv.outfile||argv._[1];
         if (outfile) {
             fs.writeFileSync(path.resolve(outfile),output,'utf8');

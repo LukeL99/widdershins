@@ -43,7 +43,7 @@
     "openapi-sampler": "^1.0.0-beta.9",
     "reftools": "0.0.20",
     "safe-json-stringify": "github:MikeRalphson/safe-json-stringify",
-    "swagger2openapi": "^2.11.16",
+    "swagger2openapi": "github:LukeL99/swagger2openapi#feature/lukel99/externalValues",
     "urijs": "^1.19.0",
     "yargs": "^11.0.0"
   },

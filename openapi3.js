@@ -447,12 +447,12 @@ function getResponseExamples(data) {
                     }
                     if (common.doContentType(cta, 'csv')) {
                         content += '```csv\n';
-                        content += yaml.safeDump(obj) + '\n';
+                        content += obj + '\n';
                         content += '```\n\n';
                     }
                     if (common.doContentType(cta, 'plain')) {
                         content += '```\n';
-                        content += yaml.safeDump(obj) + '\n';
+                        content += obj + '\n';
                         content += '```\n\n';
                     }
                     if (xmlWrap) {
